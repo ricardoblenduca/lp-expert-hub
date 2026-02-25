@@ -964,97 +964,269 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════ FOLD 6: SOLUÇÕES / PRICING ═══════════════════════════════════ -->
-  <section id="solucoes" class="relative py-24 md:py-32">
-    <div class="absolute inset-0 bg-bg-dark"></div>
+  <!-- ═══════════════════════════════════ FOLD 6: SOLUÇÕES DO ECOSSISTEMA ═══════════════════════════════════ -->
+  <section id="solucoes" class="relative py-24 lg:py-32 bg-[#060606] overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-primary/[0.03] rounded-full blur-[200px]"></div>
+    </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Header -->
-      <div class="text-center mb-16">
-        <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-6">Nosso Ecossistema</span>
-        <h2 class="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6">
-          Soluções Sob Medida para Você
+      <div class="text-center mb-16 lg:mb-20">
+        <span class="inline-block text-primary font-semibold tracking-[0.2em] uppercase text-xs mb-4 border border-primary/30 bg-primary/10 px-4 py-1.5 rounded-full">
+          Nosso Ecossistema de Soluções
+        </span>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight">
+          Três Pilares.<br/>
+          Uma <span class="text-gradient-hero">Transformação</span> Completa.
         </h2>
-        <p class="text-lg text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
-          Escolha o nível certo de inovação para escalar sua expertise.
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+          Cada unidade do Expert Hub foi desenhada para resolver uma dimensão crítica do seu negócio de conhecimento. Juntas, formam o ecossistema mais completo do mercado.
         </p>
       </div>
 
-      <!-- Pricing Grid -->
-      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
-        <!-- B'EXPERTS -->
-        <div class="bg-card-dark rounded-2xl border border-white/10 overflow-hidden pricing-hover relative">
-          <div class="h-1 bg-primary"></div>
-          <div class="p-8">
-            <span class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-6">Comunidade</span>
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center mb-6">
-              <span class="material-icons text-white text-3xl">groups</span>
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
+
+        <!-- ═══ CARD 1: B'EXPERTS ═══ -->
+        <div class="group relative bg-gradient-to-b from-[#141414] to-[#0a0a0a] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(219,20,60,0.15)]">
+          <div class="h-[3px] w-full bg-gradient-to-r from-primary via-primary to-primary/40"></div>
+          <div class="p-8 lg:p-10">
+            <!-- Badge + Icon -->
+            <div class="flex items-center justify-between mb-8">
+              <span class="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-primary bg-primary/10 border border-primary/20 px-3 py-1 rounded-full">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Programas de Aceleração
+              </span>
+              <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <span class="material-icons text-primary text-2xl">groups</span>
+              </div>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-2">B'EXPERTS</h3>
-            <p class="text-gray-500 text-sm mb-6 font-light">Rede exclusiva de especialistas, eventos e networking estratégico.</p>
-            <div class="mb-8">
-              <span class="text-3xl font-bold text-white">R$ 500</span>
-              <span class="text-gray-500">,00/mês</span>
+            <h3 class="text-3xl lg:text-4xl font-black text-white tracking-tight mb-2">B'EXPERTS</h3>
+            <p class="text-primary/80 font-semibold text-sm italic mb-6">Seu negócio de conhecimento, estruturado para escalar.</p>
+            <p class="text-gray-400 text-sm leading-relaxed mb-8">
+              Programas completos de consultoria e mentoria para transformar seu conhecimento especializado em um modelo de negócio recorrente e escalável. Da estratégia à implementação.
+            </p>
+            <!-- 3 Destaques -->
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="material-icons text-primary text-sm">map</span>
+                </div>
+                <div>
+                  <span class="text-white font-bold text-sm block">Método B'Expert</span>
+                  <span class="text-gray-500 text-xs">Roadmap estruturado de 4 meses</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="material-icons text-primary text-sm">diversity_3</span>
+                </div>
+                <div>
+                  <span class="text-white font-bold text-sm block">Comunidade Exclusiva</span>
+                  <span class="text-gray-500 text-xs">Masterminds + Imersões presenciais</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="material-icons text-primary text-sm">event_repeat</span>
+                </div>
+                <div>
+                  <span class="text-white font-bold text-sm block">Acompanhamento Semanal</span>
+                  <span class="text-gray-500 text-xs">Encontros táticos toda semana</span>
+                </div>
+              </div>
             </div>
-            <a href="#cta-final" class="block w-full text-center py-3.5 rounded-xl bg-gradient-to-r from-primary to-primary-dark text-white font-semibold text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
-              Quero Participar
+            <!-- Para quem -->
+            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 mb-8">
+              <span class="text-[10px] uppercase tracking-wider text-gray-500 font-bold block mb-3">Para quem é ideal</span>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                  <span class="material-icons text-primary text-xs">arrow_right</span>
+                  <span class="text-gray-300 text-xs">Mentores e consultores de 10k a 80k/mês que querem escalar</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="material-icons text-primary text-xs">arrow_right</span>
+                  <span class="text-gray-300 text-xs">Empresas de educação buscando recorrência</span>
+                </div>
+              </div>
+            </div>
+            <!-- CTA -->
+            <a href="#cta-final" class="block w-full py-4 text-center text-white font-bold rounded-xl bg-gradient-to-r from-primary to-[#b01030] hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
+              CONHECER OS PROGRAMAS
+              <span class="inline-block ml-1 group-hover:translate-x-1 transition-transform">→</span>
             </a>
+            <p class="text-center text-[10px] text-gray-600 mt-4 tracking-wide">
+              Programas com investimento mensal · Níveis Starter a Scale
+            </p>
           </div>
         </div>
 
-        <!-- B'TECH (Popular) -->
-        <div class="bg-card-dark rounded-2xl border border-white/10 overflow-hidden pricing-hover relative ring-2 ring-blue-500/20">
-          <div class="h-1 bg-blue-600"></div>
-          <!-- Popular Badge -->
-          <div class="absolute top-4 right-4">
-            <span class="px-3 py-1 rounded-full bg-blue-600/20 text-blue-400 text-[10px] font-bold uppercase tracking-wider">Mais Popular</span>
-          </div>
-          <div class="p-8">
-            <span class="inline-block px-3 py-1 rounded-full bg-blue-600/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6">Tecnologia</span>
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-6">
-              <span class="material-icons text-white text-3xl">smart_toy</span>
+        <!-- ═══ CARD 2: B'TECH ═══ -->
+        <div class="group relative bg-gradient-to-b from-[#141414] to-[#0a0a0a] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(37,99,235,0.15)]">
+          <div class="h-[3px] w-full bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400/40"></div>
+          <div class="p-8 lg:p-10">
+            <div class="flex items-center justify-between mb-8">
+              <span class="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                Infraestrutura Digital
+              </span>
+              <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
+                <span class="material-icons text-blue-400 text-2xl">developer_board</span>
+              </div>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-2">B'TECH</h3>
-            <p class="text-gray-500 text-sm mb-6 font-light">Ferramentas de IA, automações e tecnologia para escalar seu negócio.</p>
-            <div class="mb-8">
-              <span class="text-3xl font-bold text-white">R$ 197</span>
-              <span class="text-gray-500">,00/mês</span>
+            <h3 class="text-3xl lg:text-4xl font-black text-white tracking-tight mb-2">B'TECH</h3>
+            <p class="text-blue-400/80 font-semibold text-sm italic mb-6">A tecnologia que sustenta experts de alta performance.</p>
+            <p class="text-gray-400 text-sm leading-relaxed mb-8">
+              Plataformas, automações e infraestrutura digital completa para seu ecossistema de educação. Sua própria "Netflix de cursos", funis de vendas e integrações.
+            </p>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="material-icons text-blue-400 text-sm">play_circle</span>
+                </div>
+                <div>
+                  <span class="text-white font-bold text-sm block">Experience Flix</span>
+                  <span class="text-gray-500 text-xs">Plataforma de cursos 100% whitelabel</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="material-icons text-blue-400 text-sm">filter_alt</span>
+                </div>
+                <div>
+                  <span class="text-white font-bold text-sm block">Funnel Pages</span>
+                  <span class="text-gray-500 text-xs">Funis completos: copy + design + código</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="material-icons text-blue-400 text-sm">settings_ethernet</span>
+                </div>
+                <div>
+                  <span class="text-white font-bold text-sm block">Integrações &amp; APIs</span>
+                  <span class="text-gray-500 text-xs">CRM, automações e fluxos conectados</span>
+                </div>
+              </div>
             </div>
-            <a href="#cta-final" class="block w-full text-center py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
-              Quero Automatizar
+            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 mb-8">
+              <span class="text-[10px] uppercase tracking-wider text-gray-500 font-bold block mb-3">Para quem é ideal</span>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                  <span class="material-icons text-blue-400 text-xs">arrow_right</span>
+                  <span class="text-gray-300 text-xs">Experts que precisam de infraestrutura profissional sem equipe tech</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="material-icons text-blue-400 text-xs">arrow_right</span>
+                  <span class="text-gray-300 text-xs">Negócios que querem automatizar e escalar entregas</span>
+                </div>
+              </div>
+            </div>
+            <a href="#cta-final" class="block w-full py-4 text-center text-white font-bold rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
+              EXPLORAR SOLUÇÕES TECH
+              <span class="inline-block ml-1 group-hover:translate-x-1 transition-transform">→</span>
             </a>
+            <p class="text-center text-[10px] text-gray-600 mt-4 tracking-wide">
+              Soluções modulares com planos por nível de operação
+            </p>
           </div>
         </div>
 
-        <!-- B'AGENTS -->
-        <div class="bg-card-dark rounded-2xl border border-white/10 overflow-hidden pricing-hover relative">
-          <div class="h-1 bg-purple-600"></div>
-          <div class="p-8">
-            <span class="inline-block px-3 py-1 rounded-full bg-purple-600/20 text-purple-400 text-xs font-semibold uppercase tracking-wider mb-6">Inteligência Artificial</span>
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-fuchsia-500 flex items-center justify-center mb-6">
-              <span class="material-icons text-white text-3xl">psychology</span>
+        <!-- ═══ CARD 3: B'AGENTS ═══ -->
+        <div class="group relative bg-gradient-to-b from-[#141414] to-[#0a0a0a] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(147,51,234,0.15)]">
+          <div class="h-[3px] w-full bg-gradient-to-r from-purple-600 via-purple-500 to-fuchsia-400/40"></div>
+          <div class="p-8 lg:p-10">
+            <div class="flex items-center justify-between mb-8">
+              <span class="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-3 py-1 rounded-full">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                Inteligência Artificial
+              </span>
+              <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
+                <span class="material-icons text-purple-400 text-2xl">psychology</span>
+              </div>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-2">B'AGENTS</h3>
-            <p class="text-gray-500 text-sm mb-6 font-light">Agentes de IA personalizados que trabalham por você 24/7.</p>
-            <div class="mb-8">
-              <span class="text-3xl font-bold text-white">R$ 500</span>
-              <span class="text-gray-500">,00/mês</span>
+            <h3 class="text-3xl lg:text-4xl font-black text-white tracking-tight mb-2">B'AGENTS</h3>
+            <p class="text-purple-400/80 font-semibold text-sm italic mb-6">Agentes de IA que trabalham por você 24/7.</p>
+            <p class="text-gray-400 text-sm leading-relaxed mb-8">
+              Agentes de IA personalizados que atendem, vendem e acompanham seus clientes sem parar. Do clone digital da sua expertise ao agente comercial completo.
+            </p>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="material-icons text-purple-400 text-sm">face</span>
+                </div>
+                <div>
+                  <span class="text-white font-bold text-sm block">Clone A.I</span>
+                  <span class="text-gray-500 text-xs">Seu clone digital no WhatsApp</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="material-icons text-purple-400 text-sm">school</span>
+                </div>
+                <div>
+                  <span class="text-white font-bold text-sm block">Mentor A.I</span>
+                  <span class="text-gray-500 text-xs">Mentoria ativa com IA conversacional</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="material-icons text-purple-400 text-sm">storefront</span>
+                </div>
+                <div>
+                  <span class="text-white font-bold text-sm block">Comercial A.I</span>
+                  <span class="text-gray-500 text-xs">Vendas + leads + agendamentos automatizados</span>
+                </div>
+              </div>
             </div>
-            <a href="#cta-final" class="block w-full text-center py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-500 text-white font-semibold text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300">
-              Quero Meus Agentes
+            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 mb-8">
+              <span class="text-[10px] uppercase tracking-wider text-gray-500 font-bold block mb-3">Para quem é ideal</span>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                  <span class="material-icons text-purple-400 text-xs">arrow_right</span>
+                  <span class="text-gray-300 text-xs">Experts que querem multiplicar presença sem multiplicar tempo</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="material-icons text-purple-400 text-xs">arrow_right</span>
+                  <span class="text-gray-300 text-xs">Negócios buscando atendimento e vendas automatizados</span>
+                </div>
+              </div>
+            </div>
+            <a href="#cta-final" class="block w-full py-4 text-center text-white font-bold rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-500 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300">
+              CONHECER OS AGENTES
+              <span class="inline-block ml-1 group-hover:translate-x-1 transition-transform">→</span>
             </a>
+            <p class="text-center text-[10px] text-gray-600 mt-4 tracking-wide">
+              Setup único + recorrência mensal · Produtos avulsos disponíveis
+            </p>
           </div>
         </div>
+
       </div>
 
-      <!-- Below Pricing CTA -->
-      <div class="text-center">
-        <p class="text-gray-400 mb-6 font-light">Não sabe qual solução é ideal para o seu momento?</p>
-        <a href="#cta-final" class="inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-primary to-primary-dark rounded-xl text-white font-semibold text-sm uppercase tracking-wider glow-primary hover:scale-[1.02] transition-transform duration-300">
-          Receber Meu Plano Personalizado
-          <span class="material-icons text-lg">arrow_forward</span>
+      <!-- ═══ CTA GERAL — DIAGNÓSTICO ═══ -->
+      <div class="max-w-2xl mx-auto text-center">
+        <div class="flex items-center gap-4 mb-10">
+          <div class="flex-1 h-px bg-gradient-to-r from-transparent to-white/10"></div>
+          <span class="text-gray-600 text-xs uppercase tracking-widest font-medium">ou</span>
+          <div class="flex-1 h-px bg-gradient-to-l from-transparent to-white/10"></div>
+        </div>
+        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          Não sabe por onde começar?
+        </h3>
+        <p class="text-gray-400 mb-8 leading-relaxed">
+          Nosso time analisa seu negócio e monta a combinação ideal de soluções para o seu momento. Sem compromisso.
+        </p>
+        <a href="#cta-final" class="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-[#b01030] text-white font-bold py-5 px-10 rounded-xl shadow-[0_0_40px_-8px_rgba(219,20,60,0.5)] hover:shadow-[0_0_60px_-8px_rgba(219,20,60,0.7)] transition-all hover:scale-[1.02] text-lg">
+          RECEBER MEU PLANO PERSONALIZADO
+          <span class="material-icons">arrow_forward</span>
         </a>
+        <p class="text-gray-600 text-xs mt-4">
+          Diagnóstico gratuito · Resposta em até 24h
+        </p>
       </div>
+
     </div>
   </section>
 
