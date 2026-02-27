@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quem Somos — Expert Hub by Blenduca</title>
+  <meta name="description" content="A história, as pessoas e o propósito por trás da Blenduca. Expert-centric, knowledge-driven." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'sans-serif'] },
+          colors: {
+            primary: { DEFAULT: '#db143c', dark: '#b01030', light: '#ff4d6d' },
+            'bg-dark': '#0a0a0a',
+            surface: '#141414',
+            'card-dark': '#1a1a1a',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; overflow-x: hidden; }
+    ::selection { background: #db143c; color: #fff; }
+    .glass-nav { background: rgba(10,10,10,0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .text-gradient-primary { background: linear-gradient(135deg, #db143c, #fb7185); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
+    .mobile-menu.open { transform: translateX(0); }
+    .manifesto-verse { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .manifesto-verse.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="font-inter antialiased">
+
+  <!-- ═══════════════════════════════════ FOLD 0: NAVBAR ═══════════════════════════════════ -->
+  <nav class="fixed top-0 left-0 w-full z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center gap-4">
+          <a href="index.html" class="flex items-center gap-2">
+            <span class="material-icons text-primary text-3xl">change_history</span>
+            <span class="font-bold text-lg text-white tracking-tighter">BLENDUCA</span>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1"><span class="material-icons text-xs">arrow_back</span> Voltar ao Hub</a>
+          <a href="#origem" class="text-sm text-gray-300 hover:text-white transition-colors">Nossa História</a>
+          <a href="#time" class="text-sm text-gray-300 hover:text-white transition-colors">Time</a>
+          <a href="#manifesto" class="text-sm text-gray-300 hover:text-white transition-colors">Manifesto</a>
+          <a href="index.html#cta-final" class="bg-primary hover:bg-primary-dark text-white font-bold text-sm py-2.5 px-6 rounded-lg shadow-[0_0_20px_-5px_rgba(219,20,60,0.4)] transition-all">COMECE SUA JORNADA →</a>
+        </div>
+        <button id="menuBtn" class="md:hidden text-white"><span class="material-icons text-3xl">menu</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-[#0a0a0a]/95 backdrop-blur-xl z-[60] border-l border-white/5 p-8">
+    <button id="closeMenuBtn" class="absolute top-6 right-6 text-gray-400 hover:text-white"><span class="material-icons text-2xl">close</span></button>
+    <div class="flex flex-col gap-6 mt-16">
+      <a href="index.html" class="text-gray-400 hover:text-white text-sm flex items-center gap-2"><span class="material-icons text-xs">arrow_back</span> Voltar ao Hub</a>
+      <a href="#origem" class="text-gray-300 hover:text-white text-sm" onclick="document.getElementById('mobileMenu').classList.remove('open')">Nossa História</a>
+      <a href="#time" class="text-gray-300 hover:text-white text-sm" onclick="document.getElementById('mobileMenu').classList.remove('open')">Time</a>
+      <a href="#manifesto" class="text-gray-300 hover:text-white text-sm" onclick="document.getElementById('mobileMenu').classList.remove('open')">Manifesto</a>
+      <a href="index.html#cta-final" class="mt-4 bg-primary text-white font-bold text-sm py-3 px-6 rounded-lg text-center">COMECE SUA JORNADA →</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ FOLD 1: HERO ═══════════════════════════════════ -->
+  <section id="hero" class="relative min-h-[85vh] flex flex-col items-center justify-center overflow-hidden">
+    <!-- Background photo placeholder -->
+    <div class="absolute inset-0 z-0">
+      <div class="w-full h-full bg-gradient-to-br from-[#1a0a0e] to-[#0a0a0a] opacity-100"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a]/70 to-[#0a0a0a]"></div>
+    </div>
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="relative z-10 text-center px-4">
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[0.95] mb-6">
+        <span class="text-white block">Expert-centric,</span>
+        <span class="italic text-gradient-primary block">knowledge-driven.</span>
+      </h1>
+      <div class="flex items-center justify-center gap-3 mb-16">
+        <span class="material-icons text-primary text-xl">change_history</span>
+        <span class="text-sm text-gray-400 font-medium tracking-[0.3em] uppercase">We Are Blenduca</span>
+      </div>
+      <div class="animate-bounce"><span class="material-icons text-gray-600 text-2xl">expand_more</span></div>
+    </div>
+
+    <div class="relative z-10 text-center px-4 mt-16 max-w-2xl mx-auto">
+      <p class="text-lg text-gray-400 font-light leading-relaxed">Em um mundo abundante em informações, mas escasso em orientação — nós existimos para transformar conhecimento em negócios prósperos, capazes de mudar vidas.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOLD 2: A ORIGEM ═══════════════════════════════════ -->
+  <section id="origem" class="relative py-24 lg:py-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <!-- Left: Narrative -->
+        <div>
+          <span class="inline-block text-primary font-semibold tracking-[0.2em] uppercase text-xs mb-4 border border-primary/30 bg-primary/10 px-3 py-1 rounded-full">Nossa História</span>
+          <h2 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-8">Nascemos de uma Pergunta <span class="text-gradient-primary">Simples</span>.</h2>
+
+          <blockquote class="border-l-2 border-primary/40 pl-6 mb-8">
+            <p class="text-white text-xl font-medium italic leading-relaxed">"Por que os melhores experts do Brasil ainda dependem de modelo 1:1 para sobreviver?"</p>
+          </blockquote>
+
+          <div class="space-y-4 text-gray-400 text-sm leading-relaxed font-light">
+            <p>Em fevereiro de 2022, <strong class="text-gray-200 font-medium">Silviane Lawall</strong> e <strong class="text-gray-200 font-medium">Ricardo Werlang</strong> se fizeram essa pergunta. Ambos vinham de jornadas profundas no mundo da educação e do mercado digital — Silviane com mais de 20 anos entre gestão pública e inovação educacional, Ricardo como empreendedor e especialista em Métodos e Processos Educacionais.</p>
+            <p>Eles viram de perto a primeira onda dos infoprodutos: cursos online acessíveis, mas genéricos. E viram também os que vieram depois — mentores de verdade, com conhecimento profundo, mas presos em modelos que não escalavam.</p>
+            <p>A resposta para aquela pergunta não era um curso. Não era uma plataforma. Era um <strong class="text-gray-200 font-medium">ecossistema completo</strong> — consultoria, mentoria, tecnologia e comunidade trabalhando juntos para transformar experts em negócios de verdade.</p>
+            <p>Assim nasceu a <strong class="text-gray-200 font-medium">Blenduca</strong>. O nome vem de <em class="text-gray-300 not-italic font-medium">Blended Learning</em> (ensino híbrido) + <em class="text-gray-300 not-italic font-medium">Educação</em>. Um compromisso com soluções que misturam o melhor do conhecimento tradicional com abordagens modernas. Desde o primeiro dia, o propósito nunca mudou: <span class="text-white font-semibold">pelo melhor de cada expert.</span></p>
+          </div>
+        </div>
+
+        <!-- Right: Photo + Metrics -->
+        <div>
+          <div class="relative rounded-3xl overflow-hidden border border-white/[0.06] mb-6">
+            <div class="h-[350px] bg-gradient-to-br from-[#1a1015] via-[#141414] to-[#0e0e0e] flex items-center justify-center">
+              <div class="text-center">
+                <span class="material-icons text-primary/20 text-8xl">groups</span>
+                <p class="text-gray-600 text-xs mt-2">Foto dos fundadores</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 text-center">
+              <span class="text-[10px] uppercase tracking-wider text-gray-500 block mb-1">Fundada em</span>
+              <span class="text-white font-bold text-lg">Fev 2022</span>
+            </div>
+            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 text-center">
+              <span class="text-[10px] uppercase tracking-wider text-gray-500 block mb-1">Base</span>
+              <span class="text-white font-bold text-lg">Chapecó, SC</span>
+            </div>
+            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 text-center">
+              <span class="text-[10px] uppercase tracking-wider text-gray-500 block mb-1">Experts Acelerados</span>
+              <span class="text-white font-bold text-lg">+200</span>
+            </div>
+            <div class="bg-white/[0.02] border border-white/5 rounded-xl p-4 text-center">
+              <span class="text-[10px] uppercase tracking-wider text-gray-500 block mb-1">Unidades de Negócio</span>
+              <span class="text-white font-bold text-lg">3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOLD 3: FUNDADORES ═══════════════════════════════════ -->
+  <section id="fundadores" class="relative py-24 lg:py-32 bg-[#060606]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block text-primary font-semibold tracking-[0.2em] uppercase text-xs mb-3 border border-primary/30 bg-primary/10 px-3 py-1 rounded-full">Nossos Fundadores</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">Duas Jornadas. <span class="text-gradient-primary">Um Propósito</span>.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Silviane -->
+        <div class="group bg-gradient-to-b from-[#0e0e0e] to-[#0a0a0a] border border-white/[0.06] rounded-3xl overflow-hidden hover:border-primary/20 transition-all duration-500">
+          <div class="relative h-[400px] overflow-hidden bg-gradient-to-br from-[#1a1015] via-[#141414] to-[#0e0e0e]">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="material-icons text-primary/10 text-[120px]">person</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-8 right-8">
+              <h3 class="text-3xl font-black text-white tracking-tight">Silviane Lawall</h3>
+              <p class="text-primary/80 font-semibold text-sm mt-1">Cofundadora & Estratégia e Inovação Educacional</p>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-gray-400 leading-relaxed text-sm mb-4">Silviane carrega mais de 20 anos entre a gestão pública e o mercado digital. Passou por salas de aula, gabinetes de planejamento educacional e palcos de eventos digitais antes de entender que o futuro da educação está na interseção de todos eles.</p>
+            <p class="text-gray-400 leading-relaxed text-sm mb-4">Na Blenduca, lidera a estratégia de consultoria e o desenvolvimento dos programas B'Experts. Sua obsessão: criar métodos proprietários que transformem o conhecimento de cada expert em um ativo escalável.</p>
+            <p class="text-gray-500 leading-relaxed text-sm">É mestre em Estratégia e Inovação, com formação em Gestão Pública e Educação. Mas o que a define é a capacidade de olhar para um expert sobrecarregado e enxergar o negócio de milhões que existe dentro daquele conhecimento.</p>
+            <div class="flex flex-wrap gap-2 mt-6">
+              <span class="text-[10px] text-gray-500 bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full">Estratégia</span>
+              <span class="text-[10px] text-gray-500 bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full">Consultoria</span>
+              <span class="text-[10px] text-gray-500 bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full">Inovação Educacional</span>
+              <span class="text-[10px] text-gray-500 bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full">B'Experts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ricardo -->
+        <div class="group bg-gradient-to-b from-[#0e0e0e] to-[#0a0a0a] border border-white/[0.06] rounded-3xl overflow-hidden hover:border-primary/20 transition-all duration-500">
+          <div class="relative h-[400px] overflow-hidden bg-gradient-to-br from-[#1a1015] via-[#141414] to-[#0e0e0e]">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="material-icons text-primary/10 text-[120px]">person</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-8 right-8">
+              <h3 class="text-3xl font-black text-white tracking-tight">Ricardo Werlang</h3>
+              <p class="text-primary/80 font-semibold text-sm mt-1">Cofundador & Métodos, Processos e Tecnologia</p>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-gray-400 leading-relaxed text-sm mb-4">Ricardo é o cara que monta a máquina. Empreendedor, especialista em Métodos e Processos Educacionais, passou pela evolução completa do mercado digital — da educação a distância à era dos infoprodutos, dos lançamentos aos negócios de conhecimento high ticket.</p>
+            <p class="text-gray-400 leading-relaxed text-sm mb-4">Na Blenduca, lidera a tecnologia (B'Tech) e a inteligência artificial (B'Agents). É ele quem traduz estratégia em infraestrutura: plataformas, funis, agentes de IA, automações. Seu princípio: tecnologia existe para servir o expert, não para complicar.</p>
+            <p class="text-gray-500 leading-relaxed text-sm">É especialista em Metodologias e Design Educacional. Mas o que o move é resolver o problema que viu centenas de experts enfrentarem: ter conteúdo extraordinário e zero infraestrutura para entregá-lo ao mundo.</p>
+            <div class="flex flex-wrap gap-2 mt-6">
+              <span class="text-[10px] text-gray-500 bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full">Tecnologia</span>
+              <span class="text-[10px] text-gray-500 bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full">Métodos & Processos</span>
+              <span class="text-[10px] text-gray-500 bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full">IA</span>
+              <span class="text-[10px] text-gray-500 bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full">B'Tech</span>
+              <span class="text-[10px] text-gray-500 bg-white/[0.03] border border-white/5 px-2.5 py-1 rounded-full">B'Agents</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOLD 4: TIMELINE ═══════════════════════════════════ -->
+  <section id="jornada" class="relative py-24 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 60px 60px;"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <span class="inline-block text-primary font-semibold tracking-[0.2em] uppercase text-xs mb-3 border border-primary/30 bg-primary/10 px-3 py-1 rounded-full">Nossa Jornada</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">Da Sala de Aula à <span class="text-gradient-primary">Era da IA</span></h2>
+        <p class="text-gray-400 mt-4 text-lg max-w-xl mx-auto">A trajetória dos fundadores acompanha a evolução do mercado de educação e conhecimento no Brasil.</p>
+      </div>
+
+      <!-- Timeline Desktop -->
+      <div class="hidden lg:block relative">
+        <div class="absolute top-[60px] left-0 right-0 h-[2px] bg-gradient-to-r from-gray-800 via-primary/40 to-gray-800"></div>
+        <div class="grid grid-cols-5 gap-0">
+          <div class="relative text-center px-3">
+            <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#141414] border border-gray-700 mb-4 relative z-10"><span class="w-2.5 h-2.5 rounded-full bg-gray-600"></span></div>
+            <span class="block text-xs text-gray-500 font-bold uppercase tracking-wider mb-2">2015–2017</span>
+            <h4 class="text-white font-bold text-sm mb-2">Educação Tradicional</h4>
+            <p class="text-gray-500 text-xs leading-relaxed">Aulas presenciais, formação acadêmica. Silviane na gestão pública, Ricardo na pesquisa educacional.</p>
+          </div>
+          <div class="relative text-center px-3">
+            <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#141414] border border-gray-700 mb-4 relative z-10"><span class="w-2.5 h-2.5 rounded-full bg-gray-500"></span></div>
+            <span class="block text-xs text-gray-500 font-bold uppercase tracking-wider mb-2">2017–2019</span>
+            <h4 class="text-white font-bold text-sm mb-2">Educação a Distância</h4>
+            <p class="text-gray-500 text-xs leading-relaxed">Ensino híbrido, cursos online. Primeiros experimentos no ecossistema digital.</p>
+          </div>
+          <div class="relative text-center px-3">
+            <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#141414] border border-gray-600 mb-4 relative z-10"><span class="w-2.5 h-2.5 rounded-full bg-gray-400"></span></div>
+            <span class="block text-xs text-gray-500 font-bold uppercase tracking-wider mb-2">2019–2021</span>
+            <h4 class="text-white font-bold text-sm mb-2">1ª Era Digital</h4>
+            <p class="text-gray-500 text-xs leading-relaxed">Infoprodutos, cursos online massivos. Imersão completa no mercado digital.</p>
+          </div>
+          <div class="relative text-center px-3">
+            <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/20 border-2 border-primary mb-4 relative z-10 shadow-[0_0_20px_rgba(219,20,60,0.3)]"><span class="w-3 h-3 rounded-full bg-primary animate-pulse"></span></div>
+            <span class="block text-xs text-primary font-black uppercase tracking-wider mb-2">2022–2025</span>
+            <h4 class="text-white font-bold text-sm mb-2">Negócios de Conhecimento</h4>
+            <p class="text-gray-400 text-xs leading-relaxed font-medium">Fundação da Blenduca. Mentorias high ticket, modelo recorrente. Construção do Expert Hub.</p>
+            <span class="inline-block mt-2 text-[9px] text-primary bg-primary/10 border border-primary/20 px-2 py-0.5 rounded-full font-bold">ESTAMOS AQUI</span>
+          </div>
+          <div class="relative text-center px-3">
+            <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#141414] border border-white/20 mb-4 relative z-10"><span class="material-icons text-white/40 text-sm">auto_awesome</span></div>
+            <span class="block text-xs text-gray-400 font-bold uppercase tracking-wider mb-2">2026+</span>
+            <h4 class="text-white font-bold text-sm mb-2">3ª Era: Experts + IA</h4>
+            <p class="text-gray-500 text-xs leading-relaxed">Agentes de IA, automação inteligente. O futuro que estamos construindo agora.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline Mobile -->
+      <div class="lg:hidden relative space-y-8">
+        <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gray-700 via-primary/40 to-gray-700"></div>
+        <div class="relative pl-16">
+          <div class="absolute left-0 w-12 h-12 rounded-full bg-[#141414] border border-gray-700 flex items-center justify-center"><span class="w-2.5 h-2.5 rounded-full bg-gray-600"></span></div>
+          <span class="text-xs text-gray-500 font-bold uppercase tracking-wider block mb-1">2015–2017</span>
+          <h4 class="text-white font-bold text-base mb-1">Educação Tradicional</h4>
+          <p class="text-gray-500 text-sm font-light">Aulas presenciais, formação acadêmica.</p>
+        </div>
+        <div class="relative pl-16">
+          <div class="absolute left-0 w-12 h-12 rounded-full bg-[#141414] border border-gray-700 flex items-center justify-center"><span class="w-2.5 h-2.5 rounded-full bg-gray-500"></span></div>
+          <span class="text-xs text-gray-500 font-bold uppercase tracking-wider block mb-1">2017–2019</span>
+          <h4 class="text-white font-bold text-base mb-1">Educação a Distância</h4>
+          <p class="text-gray-500 text-sm font-light">Ensino híbrido, primeiros experimentos digitais.</p>
+        </div>
+        <div class="relative pl-16">
+          <div class="absolute left-0 w-12 h-12 rounded-full bg-[#141414] border border-gray-600 flex items-center justify-center"><span class="w-2.5 h-2.5 rounded-full bg-gray-400"></span></div>
+          <span class="text-xs text-gray-500 font-bold uppercase tracking-wider block mb-1">2019–2021</span>
+          <h4 class="text-white font-bold text-base mb-1">1ª Era Digital</h4>
+          <p class="text-gray-500 text-sm font-light">Infoprodutos, cursos online massivos.</p>
+        </div>
+        <div class="relative pl-16">
+          <div class="absolute left-0 w-12 h-12 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center shadow-[0_0_20px_rgba(219,20,60,0.3)]"><span class="w-3 h-3 rounded-full bg-primary animate-pulse"></span></div>
+          <span class="text-xs text-primary font-black uppercase tracking-wider block mb-1">2022–2025</span>
+          <h4 class="text-white font-bold text-base mb-1">Negócios de Conhecimento</h4>
+          <p class="text-gray-400 text-sm font-medium">Fundação da Blenduca. Expert Hub.</p>
+          <span class="inline-block mt-1 text-[9px] text-primary bg-primary/10 border border-primary/20 px-2 py-0.5 rounded-full font-bold">ESTAMOS AQUI</span>
+        </div>
+        <div class="relative pl-16">
+          <div class="absolute left-0 w-12 h-12 rounded-full bg-[#141414] border border-white/20 flex items-center justify-center"><span class="material-icons text-white/40 text-sm">auto_awesome</span></div>
+          <span class="text-xs text-gray-400 font-bold uppercase tracking-wider block mb-1">2026+</span>
+          <h4 class="text-white font-bold text-base mb-1">3ª Era: Experts + IA</h4>
+          <p class="text-gray-500 text-sm font-light">Agentes de IA, automação inteligente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOLD 5: NÚMEROS ═══════════════════════════════════ -->
+  <section id="numeros" class="relative py-16 bg-[#080808] border-y border-white/[0.04]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4">
+        <div class="text-center">
+          <span class="text-3xl md:text-4xl font-black text-white block">2022</span>
+          <span class="text-xs text-gray-500 uppercase tracking-wider mt-1 block">Fundada em</span>
+        </div>
+        <div class="text-center">
+          <span class="text-3xl md:text-4xl font-black text-gradient-primary block">+200</span>
+          <span class="text-xs text-gray-500 uppercase tracking-wider mt-1 block">Experts Acelerados</span>
+        </div>
+        <div class="text-center">
+          <span class="text-3xl md:text-4xl font-black text-white block">3</span>
+          <span class="text-xs text-gray-500 uppercase tracking-wider mt-1 block">Unidades de Negócio</span>
+        </div>
+        <div class="text-center">
+          <span class="text-3xl md:text-4xl font-black text-white block">+500</span>
+          <span class="text-xs text-gray-500 uppercase tracking-wider mt-1 block">Encontros Realizados</span>
+        </div>
+        <div class="text-center col-span-2 md:col-span-1">
+          <span class="text-3xl md:text-4xl font-black text-white block">+2k</span>
+          <span class="text-xs text-gray-500 uppercase tracking-wider mt-1 block">Horas de Mentoria</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOLD 6: DNA ═══════════════════════════════════ -->
+  <section id="dna" class="relative py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="inline-block text-primary font-semibold tracking-[0.2em] uppercase text-xs mb-3 border border-primary/30 bg-primary/10 px-3 py-1 rounded-full">Nosso DNA</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-6"><span class="italic text-gradient-primary">Blenduca</span>: Onde Conhecimento Encontra Inovação.</h2>
+          <p class="text-gray-400 leading-relaxed mb-4">O nome nasce da fusão de <em class="text-gray-300 not-italic font-medium">Blended Learning</em> (ensino híbrido) com <em class="text-gray-300 not-italic font-medium">Educação</em>. Um compromisso de origem: soluções que misturam o melhor do conhecimento tradicional — profundidade, método, rigor — com abordagens modernas — tecnologia, IA, escala.</p>
+          <p class="text-gray-400 leading-relaxed">O logo do Expert Hub carrega essa filosofia: uma bússola do conhecimento com 4 pontas representando as áreas de atuação. A estrela, associada à inteligência artificial. E no centro, o brilho que surge quando conhecimento se transforma em negócio.</p>
+        </div>
+        <div class="flex items-center justify-center gap-4 md:gap-6 flex-wrap">
+          <div class="text-center">
+            <div class="w-16 h-16 border border-white/10 rounded-xl flex items-center justify-center mb-2 bg-white/[0.02]">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 2L18 14L30 16L18 18L16 30L14 18L2 16L14 14L16 2Z" stroke="white" stroke-width="0.5" fill="none" opacity="0.6"/></svg>
+            </div>
+            <span class="text-[9px] text-gray-600 uppercase tracking-wider">Bússola</span>
+          </div>
+          <span class="text-gray-700 text-xl font-light">+</span>
+          <div class="text-center">
+            <div class="w-16 h-16 border border-white/10 rounded-xl flex items-center justify-center mb-2 bg-white/[0.02]">
+              <div class="w-6 h-6 rounded-full border border-white/30"></div>
+            </div>
+            <span class="text-[9px] text-gray-600 uppercase tracking-wider">Hub</span>
+          </div>
+          <span class="text-gray-700 text-xl font-light">+</span>
+          <div class="text-center">
+            <div class="w-16 h-16 border border-white/10 rounded-xl flex items-center justify-center mb-2 bg-white/[0.02]">
+              <span class="text-primary font-black text-2xl">B</span>
+            </div>
+            <span class="text-[9px] text-gray-600 uppercase tracking-wider">Blenduca</span>
+          </div>
+          <span class="text-gray-700 text-xl font-light">=</span>
+          <div class="text-center">
+            <div class="w-20 h-20 border border-primary/30 rounded-xl flex items-center justify-center mb-2 bg-primary/5 shadow-[0_0_30px_rgba(219,20,60,0.1)]">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 2L23 15L36 20L23 25L20 38L17 25L4 20L17 15L20 2Z" stroke="#db143c" stroke-width="1" fill="rgba(219,20,60,0.1)"/><text x="15.5" y="24" fill="white" font-size="10" font-weight="900">B</text></svg>
+            </div>
+            <span class="text-[9px] text-primary uppercase tracking-wider font-bold">Expert Hub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOLD 7: TIME ═══════════════════════════════════ -->
+  <section id="time" class="relative py-24 lg:py-32 bg-[#060606]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block text-primary font-semibold tracking-[0.2em] uppercase text-xs mb-3 border border-primary/30 bg-primary/10 px-3 py-1 rounded-full">Nosso Time</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">Uma Equipe Comprometida com o <span class="text-gradient-primary">Seu Sucesso</span>.</h2>
+      </div>
+
+      <!-- Time Core -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <div class="group text-center">
+          <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-4 bg-gradient-to-br from-[#1a1015] to-[#0e0e0e] border border-white/[0.06] group-hover:border-primary/20 transition-all duration-300 flex items-center justify-center">
+            <span class="material-icons text-white/5 text-7xl group-hover:text-primary/10 transition-colors">person</span>
+          </div>
+          <span class="text-[10px] text-gray-500 uppercase tracking-wider block">Marketing</span>
+          <h4 class="text-white font-bold text-base">David Raska Pradel</h4>
+          <p class="text-gray-500 text-xs">Expert em Design Digital</p>
+        </div>
+        <div class="group text-center">
+          <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-4 bg-gradient-to-br from-[#1a1015] to-[#0e0e0e] border border-white/[0.06] group-hover:border-primary/20 transition-all duration-300 flex items-center justify-center">
+            <span class="material-icons text-white/5 text-7xl group-hover:text-primary/10 transition-colors">person</span>
+          </div>
+          <span class="text-[10px] text-gray-500 uppercase tracking-wider block">Marketing</span>
+          <h4 class="text-white font-bold text-base">Anny Costa</h4>
+          <p class="text-gray-500 text-xs">Expert em Comunicação Digital</p>
+        </div>
+        <div class="group text-center">
+          <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-4 bg-gradient-to-br from-[#1a1015] to-[#0e0e0e] border border-white/[0.06] group-hover:border-primary/20 transition-all duration-300 flex items-center justify-center">
+            <span class="material-icons text-white/5 text-7xl group-hover:text-primary/10 transition-colors">person</span>
+          </div>
+          <span class="text-[10px] text-gray-500 uppercase tracking-wider block">Vendas</span>
+          <h4 class="text-white font-bold text-base">Karla Matias</h4>
+          <p class="text-gray-500 text-xs">Expert em Relacionamento Comercial</p>
+        </div>
+        <div class="group text-center">
+          <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-4 bg-gradient-to-br from-[#1a1015] to-[#0e0e0e] border border-white/[0.06] group-hover:border-primary/20 transition-all duration-300 flex items-center justify-center">
+            <span class="material-icons text-white/5 text-7xl group-hover:text-primary/10 transition-colors">person</span>
+          </div>
+          <span class="text-[10px] text-gray-500 uppercase tracking-wider block">Produto</span>
+          <h4 class="text-white font-bold text-base">Laura Gose</h4>
+          <p class="text-gray-500 text-xs">Expert em Sucesso do Cliente</p>
+        </div>
+        <div class="group text-center">
+          <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-4 bg-gradient-to-br from-[#1a1015] to-[#0e0e0e] border border-white/[0.06] group-hover:border-primary/20 transition-all duration-300 flex items-center justify-center">
+            <span class="material-icons text-white/5 text-7xl group-hover:text-primary/10 transition-colors">person</span>
+          </div>
+          <span class="text-[10px] text-gray-500 uppercase tracking-wider block">Produto</span>
+          <h4 class="text-white font-bold text-base">Carlos Eduardo</h4>
+          <p class="text-gray-500 text-xs">Expert em Tecnologia e Desenvolvimento</p>
+        </div>
+        <div class="group text-center">
+          <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-4 bg-gradient-to-br from-[#1a1015] to-[#0e0e0e] border border-white/[0.06] group-hover:border-primary/20 transition-all duration-300 flex items-center justify-center">
+            <span class="material-icons text-white/5 text-7xl group-hover:text-primary/10 transition-colors">person</span>
+          </div>
+          <span class="text-[10px] text-gray-500 uppercase tracking-wider block">Produto</span>
+          <h4 class="text-white font-bold text-base">Bruna Anselmo</h4>
+          <p class="text-gray-500 text-xs">Expert em Curadoria e Experiência</p>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="flex items-center gap-4 mb-12">
+        <div class="flex-1 h-px bg-white/5"></div>
+        <span class="text-[10px] text-gray-600 uppercase tracking-wider">Parceiros & Associados</span>
+        <div class="flex-1 h-px bg-white/5"></div>
+      </div>
+
+      <!-- Parceiros -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="text-center p-4 bg-white/[0.01] border border-white/[0.04] rounded-xl">
+          <div class="w-16 h-16 rounded-full bg-[#141414] border border-white/5 mx-auto mb-3 flex items-center justify-center"><span class="material-icons text-white/10 text-2xl">person</span></div>
+          <span class="text-[9px] text-gray-600 uppercase tracking-wider block">Agência</span>
+          <h4 class="text-white font-bold text-sm">Guida Tolfo</h4>
+          <p class="text-gray-600 text-[10px]">Consultora de Negócios</p>
+        </div>
+        <div class="text-center p-4 bg-white/[0.01] border border-white/[0.04] rounded-xl">
+          <div class="w-16 h-16 rounded-full bg-[#141414] border border-white/5 mx-auto mb-3 flex items-center justify-center"><span class="material-icons text-white/10 text-2xl">person</span></div>
+          <span class="text-[9px] text-gray-600 uppercase tracking-wider block">Agência</span>
+          <h4 class="text-white font-bold text-sm">Carla Martinazzo</h4>
+          <p class="text-gray-600 text-[10px]">Consultora Jurídica</p>
+        </div>
+        <div class="text-center p-4 bg-white/[0.01] border border-white/[0.04] rounded-xl">
+          <div class="w-16 h-16 rounded-full bg-[#141414] border border-white/5 mx-auto mb-3 flex items-center justify-center"><span class="material-icons text-white/10 text-2xl">person</span></div>
+          <span class="text-[9px] text-gray-600 uppercase tracking-wider block">Agência</span>
+          <h4 class="text-white font-bold text-sm">Fernanda Toebe</h4>
+          <p class="text-gray-600 text-[10px]">Gerenciamento e Soluções</p>
+        </div>
+        <div class="text-center p-4 bg-white/[0.01] border border-white/[0.04] rounded-xl">
+          <div class="w-16 h-16 rounded-full bg-[#141414] border border-white/5 mx-auto mb-3 flex items-center justify-center"><span class="material-icons text-white/10 text-2xl">business</span></div>
+          <span class="text-[9px] text-gray-600 uppercase tracking-wider block">Parceiro</span>
+          <h4 class="text-white font-bold text-sm">Intrío Contabilidade</h4>
+          <p class="text-gray-600 text-[10px]">Contabilidade Especializada</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOLD 8: MANIFESTO ═══════════════════════════════════ -->
+  <section id="manifesto" class="relative py-32 lg:py-40 overflow-hidden">
+    <!-- Glow background -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/[0.03] blur-[150px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <span class="inline-block text-primary font-semibold tracking-[0.2em] uppercase text-xs mb-3 border border-primary/30 bg-primary/10 px-3 py-1 rounded-full">Manifesto</span>
+      </div>
+
+      <div class="space-y-8 text-center">
+        <p class="manifesto-verse text-xl md:text-2xl font-light text-gray-500 leading-relaxed">
+          Nós acreditamos que o mundo não precisa de mais conteúdo.
+        </p>
+        <p class="manifesto-verse text-xl md:text-2xl font-light text-gray-500 leading-relaxed">
+          Precisa de mais <strong class="font-semibold text-gray-400">experts com infraestrutura</strong>.
+        </p>
+        <p class="manifesto-verse text-xl md:text-2xl font-light text-gray-400 leading-relaxed">
+          Profissionais que transformaram décadas de experiência em conhecimento profundo —
+        </p>
+        <p class="manifesto-verse text-xl md:text-2xl font-light text-gray-400 leading-relaxed">
+          e que merecem <strong class="font-semibold text-gray-300">ferramentas, estratégia e tecnologia</strong> à altura.
+        </p>
+        <p class="manifesto-verse text-xl md:text-2xl font-light text-gray-300 leading-relaxed">
+          Não acreditamos em fórmulas mágicas.
+        </p>
+        <p class="manifesto-verse text-xl md:text-2xl font-light text-gray-300 leading-relaxed">
+          Acreditamos em <strong class="font-semibold text-white">método, consistência e escala inteligente</strong>.
+        </p>
+        <p class="manifesto-verse text-xl md:text-2xl font-light text-white leading-relaxed">
+          Cada expert que aceleramos carrega consigo o potencial de <strong class="font-bold">transformar milhares de vidas</strong>.
+        </p>
+        <p class="manifesto-verse text-xl md:text-2xl font-light text-white leading-relaxed">
+          Nosso trabalho é garantir que esse potencial <strong class="font-bold">chegue ao mundo</strong>.
+        </p>
+
+        <!-- Final verse with gradient -->
+        <div class="pt-8">
+          <p class="manifesto-verse text-3xl md:text-4xl font-black leading-tight">
+            <span class="text-gradient-primary">Pelo melhor de cada expert.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOLD 9: CTA FINAL ═══════════════════════════════════ -->
+  <section id="cta-final" class="relative py-24 lg:py-32 bg-[#060606]">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-primary/[0.04] blur-[100px] rounded-full pointer-events-none"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Pronto para Fazer Parte <span class="text-gradient-primary">Dessa História</span>?</h2>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">Seja como expert transformando seu conhecimento em negócio, ou como talento construindo carreira no ecossistema.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <!-- Card Experts -->
+        <div class="bg-gradient-to-b from-[#1a0a10] to-[#0e0e0e] border border-primary/20 rounded-3xl p-8 text-center hover:border-primary/40 transition-all duration-300 group">
+          <span class="material-icons text-primary text-4xl mb-4 block group-hover:scale-110 transition-transform">diamond</span>
+          <h3 class="text-white font-bold text-xl mb-2">Para Experts</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">Você tem o conhecimento. Nós temos o ecossistema. Vamos construir seu negócio juntos.</p>
+          <a href="index.html#cta-final" class="block bg-primary hover:bg-primary-dark text-white font-bold text-sm py-3 px-6 rounded-lg shadow-[0_0_20px_-5px_rgba(219,20,60,0.4)] hover:shadow-[0_0_30px_-5px_rgba(219,20,60,0.5)] transition-all">QUERO MINHA CONSULTORIA →</a>
+        </div>
+
+        <!-- Card Talentos -->
+        <div class="bg-white/[0.02] border border-white/[0.06] rounded-3xl p-8 text-center hover:border-white/10 transition-all duration-300 group">
+          <span class="material-icons text-gray-400 text-4xl mb-4 block group-hover:text-primary/60 group-hover:scale-110 transition-all">groups</span>
+          <h3 class="text-white font-bold text-xl mb-2">Para Talentos</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">Quer trabalhar na interseção de educação, tecnologia e IA? Estamos sempre buscando gente inquieta.</p>
+          <a href="index.html#cta-final" class="block border border-white/20 hover:border-white/40 text-white font-bold text-sm py-3 px-6 rounded-lg transition-all">FALE CONOSCO →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+  <footer class="relative bg-[#050505] border-t border-white/[0.04] py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="material-icons text-primary text-2xl">change_history</span>
+            <span class="font-bold text-base text-white tracking-tighter">BLENDUCA</span>
+          </div>
+          <p class="text-gray-500 text-xs leading-relaxed">Expert-centric, knowledge-driven.<br>Transformando conhecimento em negócios desde 2022.</p>
+        </div>
+
+        <!-- Ecossistema -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Ecossistema</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-500 hover:text-white text-xs transition-colors">Expert Hub — Visão Geral</a></li>
+            <li><a href="b-experts.html" class="text-gray-500 hover:text-white text-xs transition-colors flex items-center gap-1">B'Experts <span class="w-1.5 h-1.5 rounded-full bg-[#db143c]"></span></a></li>
+            <li><a href="b-tech.html" class="text-gray-500 hover:text-white text-xs transition-colors flex items-center gap-1">B'Tech <span class="w-1.5 h-1.5 rounded-full bg-[#2563eb]"></span></a></li>
+            <li><a href="b-agents.html" class="text-gray-500 hover:text-white text-xs transition-colors flex items-center gap-1">B'Agents <span class="w-1.5 h-1.5 rounded-full bg-[#9333ea]"></span></a></li>
+          </ul>
+        </div>
+
+        <!-- Institucional -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Institucional</h4>
+          <ul class="space-y-2">
+            <li><a href="#origem" class="text-gray-500 hover:text-white text-xs transition-colors">Nossa História</a></li>
+            <li><a href="#fundadores" class="text-gray-500 hover:text-white text-xs transition-colors">Fundadores</a></li>
+            <li><a href="#time" class="text-gray-500 hover:text-white text-xs transition-colors">Time</a></li>
+            <li><a href="#manifesto" class="text-gray-500 hover:text-white text-xs transition-colors">Manifesto</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Contato</h4>
+          <ul class="space-y-2">
+            <li class="text-gray-500 text-xs flex items-center gap-2"><span class="material-icons text-xs text-primary/50">location_on</span> Chapecó, SC — Brasil</li>
+            <li class="text-gray-500 text-xs flex items-center gap-2"><span class="material-icons text-xs text-primary/50">email</span> contato@blenduca.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/[0.04] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <span class="text-gray-600 text-[10px]">© 2025 Blenduca Educação e Tecnologia LTDA. Todos os direitos reservados.</span>
+        <div class="flex gap-4">
+          <a href="#" class="text-gray-600 hover:text-white transition-colors text-[10px]">Política de Privacidade</a>
+          <a href="#" class="text-gray-600 hover:text-white transition-colors text-[10px]">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════ JAVASCRIPT ═══════════════════════════════════ -->
+  <script>
+    // Mobile Menu
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.add('open'));
+    closeMenuBtn?.addEventListener('click', () => mobileMenu.classList.remove('open'));
+
+    // Navbar scroll effect
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        nav.classList.add('shadow-lg');
+        nav.style.borderBottomColor = 'rgba(255,255,255,0.08)';
+      } else {
+        nav.classList.remove('shadow-lg');
+        nav.style.borderBottomColor = 'rgba(255,255,255,0.05)';
+      }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // IntersectionObserver for Manifesto verses
+    const manifestoVerses = document.querySelectorAll('.manifesto-verse');
+    const verseObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          verseObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.3,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    manifestoVerses.forEach((verse, index) => {
+      verse.style.transitionDelay = `${index * 0.15}s`;
+      verseObserver.observe(verse);
+    });
+  </script>
+
+</body>
+</html>
